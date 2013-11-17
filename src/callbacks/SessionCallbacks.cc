@@ -126,6 +126,12 @@ void SessionCallbacks::end_of_track(sp_session* session) {
   }
 }
 
+void SessionCallbacks::metadata_updated(sp_session *session) {
+  if(Player::instance->nodeObject != nullptr) {
+    Player::instance->nodeObject->call(METADATA_UPDATED);
+  }
+}
+
 void SessionCallbacks::sendTimer(int sample_rate) {
   if( spotify::framesReceived / sample_rate > 0) {
     spotify::currentSecond++;

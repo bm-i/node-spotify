@@ -168,6 +168,7 @@ Handle<Value> NodeSpotify::getRememberedUser(Local<String> property, const Acces
 void NodeSpotify::init() {
   HandleScope scope;
   Handle<FunctionTemplate> constructorTemplate = NodeWrapped::init("Spotify");
+
   NODE_SET_PROTOTYPE_METHOD(constructorTemplate, "login", login);
   NODE_SET_PROTOTYPE_METHOD(constructorTemplate, "logout", logout);
   NODE_SET_PROTOTYPE_METHOD(constructorTemplate, "getPlaylists", getPlaylists);

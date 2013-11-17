@@ -31,4 +31,6 @@ THE SOFTWARE.
 #define SEARCH_COMPLETE "search_complete"
 #define ALBUMBROWSE_COMPLETE "albumbrowse_complete"
 #define ARTISTBROWSE_COMPLETE "artistbrowse_complete"
+#define METADATA_UPDATED "metadata_updated"
+
 #endif
